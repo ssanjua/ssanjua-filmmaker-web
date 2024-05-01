@@ -1,0 +1,30 @@
+---
+import SocialButton from "./buttons/SocialButton.astro";
+import VimeoIcon from "./icons/VimeoIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import XIcon from "./icons/XIcon.astro";
+---
+
+<ul class="flex flex-wrap items-center gap-2 text-white">
+  <li>
+      <SocialButton href="https://github.com/ssanjua">
+          <VimeoIcon class="size-6" />
+      </SocialButton>
+  </li>
+  <li>
+      <SocialButton href="https://www.linkedin.com/in/paupallares/">
+          <LinkedinIcon class="size-6" />
+      </SocialButton>
+  </li>
+  <li>
+      <SocialButton href="https://twitter.com/pupipallares">
+          <XIcon class="size-6" />
+      </SocialButton>
+  </li>
+  <li>
+      <SocialButton href="https://www.instagram.com/ppupipallares/">
+          <InstagramIcon class="size-6" />
+      </SocialButton>
+  </li>
+</ul>

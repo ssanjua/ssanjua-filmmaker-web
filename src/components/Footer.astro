@@ -1,0 +1,42 @@
+---
+import SocialButton from "./buttons/SocialButton.astro";
+import VimeoIcon from "./icons/VimeoIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+import LinkedinIcon from "./icons/LinkedinIcon.astro";
+import XIcon from "./icons/XIcon.astro";
+---
+
+<footer
+    class="rounded-lg w-full mx-auto"
+>
+    <div
+        class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between"
+    >
+        <span
+            class="text-sm sm:text-center text-gray-800 dark:text-gray-200"
+            >made with ❤️ by <span class="font-bold">ssajua ©</span> - 2024
+        </span>
+        <ul class="flex flex-wrap items-center mt-3 gap-x-2 sm:mt-0">
+            <li>
+                <SocialButton href="https://github.com/ssanjua">
+                    <VimeoIcon class="size-6" />
+                </SocialButton>
+            </li>
+            <li>
+                <SocialButton href="https://www.linkedin.com/in/paupallares/">
+                    <LinkedinIcon class="size-6" />
+                </SocialButton>
+            </li>
+            <li>
+                <SocialButton href="https://twitter.com/pupipallares">
+                    <XIcon class="size-6" />
+                </SocialButton>
+            </li>
+            <li>
+                <SocialButton href="https://www.instagram.com/ppupipallares/">
+                    <InstagramIcon class="size-6" />
+                </SocialButton>
+            </li>
+        </ul>
+    </div>
+</footer>

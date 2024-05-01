@@ -1,0 +1,45 @@
+---
+const EXPERIENCE = [
+  {
+    image: "/company/atleticoeste.webp",
+    company: "Atletico Oeste",
+    rol: "Directora Creativa",
+    date: "2017 - 2022",
+    description: "Hice esto y aquello y aquello otro",
+  },
+  {
+    image: "/company/cronos.webp",
+    company: "Cronos",
+    rol: "Directora y Editora",
+    date: "2018 - 2023",
+    description: "Hice esto y aquello y aquello otro",
+  },
+  {
+    image: "/company/chancho_va.webp",
+    company: "Chancho Va",
+    rol: "Directora Creativa",
+    date: "2017 - 2022",
+    description: "Hice esto y aquello y aquello otro",
+  },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+  {
+    EXPERIENCE.map(({ company, rol, date, description, image }) => (
+      <div class="flex flex-col p-5">
+        <div>
+          <img
+            src={image}
+            alt={`${company} logo`}
+            class="rounded-lg size-12"
+          />
+        </div>
+        <h2>{company}</h2>
+        <h3>{rol}</h3>
+        <h4>{date}</h4>
+        <p>{description}</p>
+      </div>
+    ))
+  }
+</div>

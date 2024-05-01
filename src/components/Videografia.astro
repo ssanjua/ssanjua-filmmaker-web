@@ -1,0 +1,39 @@
+---
+const VIDEOS = [
+  {
+    title: "LAS EX - D.A.N.C.E | En vivo en la DILDA feminista",
+    link: "https://www.youtube.com/embed/_2X1Gb0DRik",
+    description: "LAS EX - D.A.N.C.E. - Autodefensa. 18.GOZA redords.",
+  },
+  {
+    title:
+      "Sebastián Peyceré INFLEXIÓN TRÍO |  Live Session en Estudio Triada",
+    link: "https://www.youtube.com/embed/X_GL3CoFwvY",
+    description: "Sesión en vivo en ESTUDIO TRIADA DE Sirso Iseas.",
+  },
+  {
+    title: "LAS EX - D.A.N.C.E | En vivo en la DILDA feminista",
+    link: "https://www.youtube.com/embed/_2X1Gb0DRik",
+    description: "LAS EX - D.A.N.C.E. - Autodefensa. 18.GOZA redords.",
+  },
+
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  {
+    VIDEOS.map(({ title, link, description }) => (
+      <div class="relative p-5">
+        <h1 class="text-lg font-bold mb-2">{title}</h1>
+        <iframe
+          class="w-full h-96 mb-2"
+          src={link}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        />
+        <p class="text-sm">{description}</p>
+      </div>
+    ))
+  }
+</div>

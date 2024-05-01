@@ -1,0 +1,61 @@
+---
+import EmailIcon from "./icons/EmailIcon.astro";
+import MapIcon from "./icons/MapIcon.astro";
+import MobileIcon from "./icons/MobileIcon.astro";
+
+---
+
+<div class="flex justify-center items-center gap-5 p-5">
+  <div class="flex items-center">
+    <a class="cursor-pointer">
+      <img src="./pau_cv.webp" id="profile-picture" class="max-w-[200px] h-auto" alt="curriculum de paula pallares"/>
+    </a>
+
+    <div class="m-5">
+      <p class="descripcion-text text-wrap mb-4 mr-4">
+        <span class="dark:font-thin"
+          >I am eager to connect and explore how we can thrive together. If
+          you're looking for
+        </span>
+      </p>
+      <p class="flex items-center mb-2">
+        <MobileIcon class="size-4 mr-1" />
+        <a
+          href="tel:+34613526623"
+          class="text-sm text-gray-700 hover:text-black hover:font-bold dark:text-gray-200 dark:hover:text-white transition-all duration-300 ease-in-out"
+        >
+          +34613526623</a
+        >
+      </p>
+      <div class="flex items-center mb-2">
+        <EmailIcon class="size-4 mr-1" />
+        <a
+          href="mailto:ppaupallares@gmail.com"
+          class="text-sm text-gray-700 hover:text-black hover:font-bold dark:text-gray-200 dark:hover:text-white transition-all duration-300 ease-in-out"
+        >
+          ppaupallares@gmail.com</a
+        >
+      </div>
+      <div class="flex items-center mb-3">
+        <MapIcon class="size-4 mr-1" />
+        <p class="text-sm text-gray-900 dark:text-gray-200">
+          Currently based in <span class="font-bold">Barcelona, Spain</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const image = document.getElementById('profile-picture');
+
+  image.addEventListener('click', () => {
+    if (!document.fullscreenElement) {
+      image.requestFullscreen().catch(err => {
+        console.error(`Error al intentar activar el modo de pantalla completa: ${err.message}`);
+      });
+    } else {
+      document.exitFullscreen();
+    }
+  });
+</script>
