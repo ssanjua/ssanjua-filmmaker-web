@@ -1,6 +1,9 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import '@fontsource-variable/martian-mono';
+// Supports weights 100-900
+import '@fontsource-variable/noto-sans';
 
 interface Props {
 	title: string;
@@ -10,7 +13,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Audiovisual Portfolio" />
@@ -20,7 +23,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<div class="mx-auto">
+		<div class="">
 			<Header />
 			<slot />
 			<Footer />
@@ -33,18 +36,38 @@ const { title } = Astro.props;
 	}
 
 	html {
-		font-family: system-ui, sans-serif;
+		
 		background: #0F0F0F;
 		scroll-behavior: smooth;
 		color: white;
 	}
 
 	body {
-		
-		
+		font-family: 'Martian Mono Variable', monospace;
 		min-height: 100vh;
 		overscroll-behavior: none;
-		margin: 0;
-		padding: 0;
 	}
+
+	#description {
+		font-family: 'Noto Sans Variable', sans-serif;
+	}
+
+	.custom-shadow {
+		box-shadow: 9px 9px 0px 0px rgba(99,99,99,1);
+		border-radius: 10px;
+	}
+
+	.custom-shadow-sm {
+		box-shadow: 5px 4px 0px 0px rgba(99,99,99,1);
+		border-radius: 10px;
+	}
+
+	.custom-shadow-ex {
+		box-shadow: 5px 4px 0px 0px rgba(255,255,255,1);
+	}
+
+	.custom-shadow-cv {
+		box-shadow: 5px 4px 0px 0px rgba(255,67,211,1);
+	}
+
 </style>

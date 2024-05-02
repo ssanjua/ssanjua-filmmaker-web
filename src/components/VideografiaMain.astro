@@ -1,32 +1,37 @@
 ---
 const VIDEOS = [
   {
-    title: "LAS EX - D.A.N.C.E | En vivo en la DILDA feminista",
-    link: "https://www.youtube.com/embed/_2X1Gb0DRik",
-    description: "LAS EX - D.A.N.C.E. - Autodefensa. 18.GOZA redords.",
+    title: "Music Videos - Paula Pallares - Reel",
+    link: "https://player.vimeo.com/video/554523559?h=d26122ebd4",
+    description: "Reel de videos musicales.",
   },
   {
-    title:
-      "Sebastián Peyceré INFLEXIÓN TRÍO |  Live Session en Estudio Triada",
-    link: "https://www.youtube.com/embed/X_GL3CoFwvY",
-    description: "Sesión en vivo en ESTUDIO TRIADA DE Sirso Iseas.",
+    title: "Si la gente no te entiende, busca otra gente.",
+    link: "https://player.vimeo.com/video/135841117?h=8c6642431b",
+    description: "Corto documental. Ganador de varios festivales internacionales.",
   },
 ];
+
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-2">
   {
     VIDEOS.map(({ title, link, description }) => (
       <div class="relative p-5">
-        <h1 class="text-lg font-bold mb-2">{title}</h1>
-        <iframe
-          class="w-full h-96 mb-2"
-          src={link}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        />
-        <p class="text-sm">{description}</p>
+        <>
+          <div style="padding:56.25% 0 0 0;position:relative;">
+            <iframe
+              class="rounded-xl"
+              src={link}
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+            />
+          </div>
+          <script src="https://player.vimeo.com/api/player.js" />
+          <h1 class="text font-bold my-2">{title}</h1>
+        </>
+        <p id="description" class="text-xs">{description}</p>
       </div>
     ))
   }

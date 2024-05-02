@@ -1,0 +1,34 @@
+---
+const VIDEOS = [
+  {
+    title: "Serenata #2 MOGUE en Agronomía - Prod. RANCHEAR",
+    link: "https://www.youtube.com/embed/lACcDpygWdA",
+    description: "Esta vez nos fuimos a recorrer Agronomía bien temprano con un café en la mano ☕️ Hasta encontar un espacio perfecto para que el artista grabe sus caniones.",
+  },
+  {
+    title: "Franco Murua - Niebla Purpura (Video Oficial)",
+    link: "https://www.youtube.com/embed/tbSevR0Dil0",
+    description: "Video Oficial de Franco Murua de la canción Niebla Purpura, versión en español del tema Purple Haze de Jimi Hendrix.",
+  },
+];
+---
+
+<div class="grid grid-cols-1 md:grid-cols-2">
+  {
+    VIDEOS.map(({ title, link, description }) => (
+      <div class="relative p-5">
+        <>
+          <iframe
+            class="w-full h-60 mb-2 rounded-xl"
+            src={link}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          />
+          <h1 class="text font-bold my-2">{title}</h1>
+          <p id="description" class="text-xs text-gray-300">{description}</p>
+        </>
+      </div>
+    ))
+  }
+</div>

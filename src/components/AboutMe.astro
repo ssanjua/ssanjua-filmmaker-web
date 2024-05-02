@@ -4,40 +4,34 @@ import SocialLinks from "./SocialsLinks.astro";
 ---
 
 <div class="flex flex-row mx-5 justify-center" id="aboutme">
-  <div class="flex flex-col gap-6">
-    <h3 class="text-6xl font-bold flex items-center">PAU PALLARES</h3>
-    <div class="flex items-center gap-x-4">
+  
+  <div class="hidden md:flex md:items-center md:justify-center md:size-72">
+  <ProfilePicture
+    
+  />  </div>
+  <div class="flex flex-col gap-2">
+    <h3 class="text-4xl md:text-5xl font-bold flex items-center mt-2 md:mt-3">PAU PALLARES</h3>
+    <div class="flex items-center gap-x-2 md:gap-x-4">
       <div>
-        <h4 class="text-black bg-white pl-2 pr-3 rounded-r-full">
+        <h4 class="text-black bg-white pl-2 pr-2 rounded-r-full transition-all hover:scale-105 ease-in-out duration-300">
           EDITORA Y DIRECTORA AUDIOVISUAL
         </h4>
       </div>
+      <div class="hidden md:block">
+        <SocialLinks />
+      </div>
+    </div>
+    <div class="my-2 md:hidden">
       <SocialLinks />
     </div>
-    <h2 class="descripcion-text max-w-[900px] text-pretty md:mr-10">
-      <span class="font-regular">Hi! I'm Paula,</span>
-      <span class=""
-        >also known as ssanjua. Passionate about technology and committed to
-        creating products that make a difference, my experience in the
-        multimedia sector has shaped me in leadership and collaborative work.
-        Specialized in technologies such as</span
-      >
-      <span class="font-bold"
-        >JavaScript, React, Node.js, and SQL/NoSQL databases,</span
-      >
-      <span class="dark:font-thin">my projects include applications like</span>
-      <span class="">Bookeando and YarcoDelivery,</span>
-      <span class="dark:font-thin"
-        >covering both backend and frontend. My colleagues highlight my
-        technical skills as well as my</span
-      >
-      <span class="">creative thinking and problem-solving abilities.</span>
+    <h2 class="descripcion-text max-w-[900px] text-pretty mr-10">
+      <span id="description" class="font-regular leading-8">
+          Con más de siette años de experiencia en la creación de contenido dinámico para diversas plataformas, tanto digitales como tradicionales, he liderado una amplia gama de proyectos audiovisuales. Desde piezas extensas hata contenido especificamente diseñado para redes sociales, en contextos publicitarios y de propaganda. He demostrado habilidades para adaptarme con facilidad y dirigir equipos creativos y técnicos con confianza.
+      </span>  
     </h2>
   </div>
-  <ProfilePicture
-    class="hidden md:flex md:items-center md:justify-center md:size-52 mt-10"
-  />
 </div>
-<div class="flex md:hidden justify-center items-center">
-  <ProfilePicture class="size-32" />
+<div class="flex md:hidden items-center m-5">
+  <ProfilePicture class="-mb-5 size-52" />
 </div>
+

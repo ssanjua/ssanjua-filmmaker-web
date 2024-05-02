@@ -1,31 +1,29 @@
 ---
-import ProfilePicture from "../components/ProfilePicture.astro";
+import ProfilePictureClean from "../components/ProfilePictureClean.astro";
 ---
 
-<header class="bg-black">
+<header class="pt-5 pb-2 bg-black">
   <a>
-      <nav
-        class="flex justify-center items-center gap-x-2 md:gap-x-4 lg:gap-x-6 pt-5"
+    <nav class="flex justify-center items-center md:gap-x-4 lg:gap-x-6">
+      <a href="#top">
+        <ProfilePictureClean class="hidden md:block size-12" />
+      </a>
+      <a
+        class="text-sm hover:text-myPink hover:font-bold dark:text-white dark:hover:text-myPink px-2 md:px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
+        href="#aboutme">Sobre mi</a
       >
-        <a href="#top">
-          <ProfilePicture class="size-10"/>
-        </a>
-        <a
-          class="text-gray-700 hover:text-gray-600 hover:font-bold dark:text-white/80 dark:hover:text-white px-2 md:px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
-          href="#aboutme">Acerca de mi</a
-        >
-        <a
-          class="text-gray-700 hover:text-gray-600 hover:font-bold dark:text-white/80 dark:hover:text-white px-2 md:px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
-          href="#experience">Experiencia</a
-        >
-        <a
-          class="text-gray-700 hover:text-gray-600 hover:font-bold dark:text-white/80 dark:hover:text-white px-2 md:px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
-          href="#videograph">Videografía</a
-        >
-        <a
-          href="#cv">CV</a
-        >
-      </nav>
-    
+      <a
+        class="text-sm hover:font-bold dark:text-white dark:hover:text-myPink px-2 md:px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
+        href="#experience">Experiencia</a
+      >
+      <a
+        class="text-sm hover:font-bold dark:text-white dark:hover:text-myPink px-2 md:px-4 py-2 rounded-full transition-all duration-300 ease-in-out"
+        href="#videograph">Videografía</a
+      >
+      <a
+        class="hover:font-bold dark:text-myPink dark:hover:text-white hover:border-myPink px-2 md:px-4 py-2 border rounded-lg custom-shadow-ex transition-all duration-300 ease-in-out"
+        href="#cv">CV</a
+      >
+    </nav>
   </a>
 </header>

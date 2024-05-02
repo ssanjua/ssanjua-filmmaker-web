@@ -1,22 +1,24 @@
 ---
+import Line from "./buttons/Line.astro";
+
 const EXPERIENCE = [
   {
     image: "/company/atleticoeste.webp",
-    company: "Atletico Oeste",
+    company: "ATLÉTICO OESTE",
     rol: "Directora Creativa",
     date: "2017 - 2022",
     description: "Hice esto y aquello y aquello otro",
   },
   {
     image: "/company/cronos.webp",
-    company: "Cronos",
+    company: "CRONOS",
     rol: "Directora y Editora",
     date: "2018 - 2023",
     description: "Hice esto y aquello y aquello otro",
   },
   {
     image: "/company/chancho_va.webp",
-    company: "Chancho Va",
+    company: "CHANCHO VA",
     rol: "Directora Creativa",
     date: "2017 - 2022",
     description: "Hice esto y aquello y aquello otro",
@@ -24,21 +26,28 @@ const EXPERIENCE = [
 ];
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
   {
     EXPERIENCE.map(({ company, rol, date, description, image }) => (
-      <div class="flex flex-col p-5">
-        <div>
+      <div class="flex flex-col gap-2 border p-10 transition-all duration-300 ease-in-out hover:scale-105 hover:bg-myGray custom-shadow-ex">
+        <div class="grid grid-cols-3 items-start">
           <img
             src={image}
             alt={`${company} logo`}
-            class="rounded-lg size-12"
+            class="col-span-1 rounded-lg size-14"
           />
+          <div class="col-span-2 flex flex-col justify-start">
+            <h4 class="text-xs text-gray-400 mb-1">{date}</h4>
+            <h2 class="font-bold font-xl">{company}</h2>
+          </div>
         </div>
-        <h2>{company}</h2>
-        <h3>{rol}</h3>
-        <h4>{date}</h4>
-        <p>{description}</p>
+
+        <Line />
+        <h3 id="description" class="font-bold text-xl">
+          {rol}
+        </h3>
+
+        <p id="description" class="text-gray-200">{description}</p>
       </div>
     ))
   }
