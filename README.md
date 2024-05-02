@@ -1,54 +1,47 @@
-# Astro Starter Kit: Basics
+# 🎬 Audiovisual Portfolio
+
+## 🚀 Sobre el proyecto
+
+Este es un proyecto de portfolio audiovisual creado para mostrar una colección de videos que representan mi trabajo como profesional del diseño audiovisual. La plataforma está desarrollada utilizando Astro, lo que proporciona una experiencia web rápida y eficiente.
+
+## 👀 Características
+
+★ Visualización de Videos: Explora una variedad de videos que muestran mi trabajo en diferentes proyectos y áreas de especialización.
+★ Interfaz Intuitiva: Navega fácilmente a través del portfolio gracias a una interfaz intuitiva y amigable para el usuario.
+★ Responsive: Disfruta del portfolio en cualquier dispositivo, ya sea móvil, tablet o desktop, gracias al diseño responsive.
+
+
+<p align="center" >
+<a href="https://ppaupallares.vercel.app"><img src="ppaupallares.webp" alt="Atletico Oeste YouTube" width="400"/></a>
+</p>
+
+
+> Work in Progress: Algunas características aún están en desarrollo, incluyendo:
+
+✦ Link a Proyectos de Publicidad: Próximamente podrás acceder a proyectos específicos de publicidad para ver más ejemplos de mi trabajo.
+✦ Traducción a Inglés: Se está trabajando en la traducción del contenido del portfolio al inglés para una audiencia más amplia.
+✦ Color Switch: Próximamente podrás cambiar entre modo oscuro y modo claro.
+
+
+### Uso
+Clona este repositorio en tu máquina local.
 
 ```sh
-npm create astro@latest -- --template basics
+  git clone https://github.com/ssanjua/ssanjua-filmmaker-web.git
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Instala las dependencias del proyecto utilizando npm o yarn.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```sh
+  npm install
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Ejecuta el proyecto localmente utilizando npm start o yarn start.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+  npm run dev
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+***Contribución***
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+¡Las contribuciones son bienvenidas! Si tienes alguna sugerencia, mejora o corrección, no dudes en abrir un issue o enviar un pull request.
