@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
       colors: {
-        myPink: '#FF43D3',
+        myPink: '#E54980',
         myGray: '#161616',
       },
     },
