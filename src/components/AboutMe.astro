@@ -3,17 +3,22 @@ import ProfilePicture from "./ProfilePicture.astro";
 import SocialLinks from "./SocialsLinks.astro";
 ---
 
-<div class="flex flex-row mx-5 justify-center" id="aboutme">
-  
-  <div class="hidden md:flex md:items-center md:justify-center md:size-72">
-  <ProfilePicture
-    
-  />  </div>
-  <div class="flex flex-col gap-2">
-    <h3 class="text-4xl md:text-5xl font-bold flex items-center mt-2 md:mt-3">PAU PALLARES</h3>
+<div class="flex md:hidden justify-center items-center m-5">
+  <ProfilePicture class="-mb-5 size-52" />
+</div>
+<div class="flex items-center mx-5 justify-center" id="aboutme">
+  <div class="hidden md:flex justify-center items-center min-w-52 md:size-72">
+    <ProfilePicture />
+  </div>
+  <div class="flex flex-col gap-4">
+    <h3 class="text-4xl md:text-5xl font-bold flex items-center mt-2 md:mt-3">
+      PAU PALLARES
+    </h3>
     <div class="flex items-center gap-x-2 md:gap-x-4">
       <div>
-        <h4 class="text-black bg-white pl-2 pr-2 rounded-r-full transition-all hover:scale-105 ease-in-out duration-300">
+        <h4
+          class="text-black bg-white pl-2 pr-2 rounded-r-full transition-all hover:scale-105 ease-in-out duration-300"
+        >
           EDITORA Y DIRECTORA AUDIOVISUAL
         </h4>
       </div>
@@ -26,12 +31,17 @@ import SocialLinks from "./SocialsLinks.astro";
     </div>
     <h2 class="descripcion-text max-w-[900px] text-pretty mr-10">
       <span id="description" class="font-regular leading-8">
-          Con más de siete años de experiencia en la creación de contenido dinámico para diversas plataformas, tanto digitales como tradicionales, he liderado una amplia gama de proyectos audiovisuales. Desde piezas extensas hasta contenido especificamente diseñado para redes sociales, en contextos publicitarios y de propaganda. He demostrado habilidades para adaptarme con facilidad y dirigir equipos creativos y técnicos con confianza.
-      </span>  
+        Hola, soy Pau, también conocida como Pupi o ssanjua. Diseñadora de
+        Imagen y Sonido de la Universidad de Buenos Aires y especializada en
+        montaje y dirección. Con casi 10 años de experiencia en el rubro he
+        tocado casi todas las areas de la producción audiovisual, desde el
+        guión, grabación hasta postproducción. Tengo un fluido manejo en Adobe
+        Creative Cloud (Premiere, After Effects, Audition, Photoshop e
+        Ilustrator) como también Da Vinci Resolve y Final Cut. Me encanta
+        resolver problemas, buscar soluciones creativas y aprender a cada paso.
+        Actualmente estudio de forma autodidacta Programación y Ciberseguridad.
+      </span>
     </h2>
   </div>
-</div>
-<div class="flex md:hidden items-center m-5">
-  <ProfilePicture class="-mb-5 size-52" />
 </div>
 
