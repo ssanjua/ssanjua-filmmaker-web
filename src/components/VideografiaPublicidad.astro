@@ -1,8 +1,8 @@
 ---
 const VIDEOS = [
 {
-    src: '/videos/BA TAXI.mp4',
-    thumbnail: '/thumbnails/bataxi.png',
+    src: '/videos/brahma.mp4',
+    thumbnail: '/thumbnails/brahma.png',
     title: 'BRAHMA CARNAVAL',
   },
   {
@@ -46,7 +46,7 @@ const VIDEOS_SMALL = [
   {VIDEOS.map((video, index) => (
     <div class="relative cursor-pointer" data-video-src={video.src}>
       <img src={video.thumbnail} alt={`Thumbnail of ${video.title}`} class="w-full h-full rounded-lg object-cover" />
-      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 text-white text-lg p-2">
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg p-2">
         {video.title}
       </div>
       <video class="hidden" muted loop playsinline width="100%" height="100%">
@@ -72,15 +72,15 @@ const VIDEOS_SMALL = [
   ))}
 </div>
 
-<div id="fullscreen-container" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50">
-  <button id="close-fullscreen" class="absolute top-4 right-4 bg-red-500 text-white p-2 text-lg">X</button>
+<div id="fullscreen-container" class="hidden fixed inset-0 items-center justify-center bg-black bg-opacity-90 z-50">
+  <button id="close-fullscreen" class="absolute top-4 right-4 bg-myPink text-white p-2 px-4 custom-shadow-wh text-lg">X</button>
   <video id="fullscreen-video" controls autoplay class="w-4/5 h-auto"></video>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const fullscreenContainer = document.getElementById('fullscreen-container');
-    const fullscreenVideo = document.getElementById('fullscreen-video');
+    const fullscreenVideo = document.getElementById('fullscreen-video') as HTMLVideoElement;
     const closeFullscreenButton = document.getElementById('close-fullscreen');
 
     if (!fullscreenContainer || !fullscreenVideo || !closeFullscreenButton) {
@@ -88,7 +88,7 @@ const VIDEOS_SMALL = [
       return;
     }
 
-    function addClickEventListener(videoGridId) {
+    function addClickEventListener(videoGridId: string) {
       const videoGrid = document.getElementById(videoGridId);
       if (!videoGrid) {
         console.error(`No se encontró el elemento con id ${videoGridId}.`);
@@ -103,7 +103,8 @@ const VIDEOS_SMALL = [
           const videoSrc = videoDiv.getAttribute('data-video-src');
           if (videoSrc) {
             fullscreenVideo.src = videoSrc;
-            fullscreenContainer.classList.remove('hidden');
+            fullscreenContainer?.classList.remove('hidden');
+            fullscreenContainer?.classList.add('flex');
           }
         }
       });
@@ -113,7 +114,8 @@ const VIDEOS_SMALL = [
     addClickEventListener('video-grid-3');
 
     closeFullscreenButton.addEventListener('click', function() {
-      fullscreenContainer.classList.add('hidden');
+      fullscreenContainer?.classList.add('hidden');
+      fullscreenContainer?.classList.remove('flex');
       fullscreenVideo.pause();
       fullscreenVideo.src = '';
     });
