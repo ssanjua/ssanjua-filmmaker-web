@@ -19,12 +19,12 @@ const VIDEOS = [
 ];
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6">
   {
     VIDEOS.map(({ title, link, description }) => (
-      <div class="relative p-5">
+      <div class="relative p-3">
         <iframe
-          class="w-full h-60 mb-2 rounded-xl"
+          class="w-full h-60 mb-2 rounded-lg"
           src={link}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"

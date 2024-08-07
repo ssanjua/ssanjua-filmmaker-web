@@ -3,13 +3,13 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Experience from "../components/Experience.astro";
 import Videografia from "../components/Videografia.astro";
-import VerMasButton from "../components/VerMasButton.astro";
 import VideografiaMain from "../components/VideografiaMain.astro";
-import VideografiaPublicidad from "../components/VideografiaPublicidad.astro";
+import VideografiaMusica from "../components/VideografiaMusica.astro";
 
 import AboutMe from "../components/AboutMe.astro";
 import Cv from "../components/Cv.astro";
 import Line from "../components/buttons/Line.astro";
+import VideografiaPublicidad from "../components/VideografiaPublicidad.astro";
 ---
 
 <Layout title="pau pallares | filmmaker">
@@ -20,7 +20,7 @@ import Line from "../components/buttons/Line.astro";
 				<AboutMe />
 			</div>
 			<div class="flex justify-center mx-5 mt-40 mb-10">
-				<h1 id="experience" class="text-3xl font-bold bg-myPink text-white p-2 custom-shadow-ex mb-10">
+				<h1 id="experience" class="text-3xl font-bold bg-myPink text-white p-2  mb-10">
 					EXPERIENCIA
 				</h1>
 			</div>
@@ -28,15 +28,19 @@ import Line from "../components/buttons/Line.astro";
 				<Experience />
 			</div>
 			<div class="flex justify-center mx-5 mt-40 mb-10">
-				<h1 id="videograph" class="text-3xl font-bold bg-myPink text-white custom-shadow-ex p-2 mb-10">
-					CÁMARA + DIRECCIÓN + EDICIÓN
+				<h1 id="videograph" class="text-3xl font-bold bg-myPink text-white  p-2 mb-10">
+					PUBLICIDAD + EDICIÓN
 				</h1>
 			</div>
 			<VideografiaPublicidad />
+			<div class="flex justify-center mx-5 mt-40 mb-10">
+				<h1 id="videograph" class="text-2xl font-bold bg-myPink text-white  p-2 mb-10">
+					CÁMARA + DIRECCIÓN + EDICIÓN
+				</h1>
+			</div>
+			<VideografiaMusica />
 			<Videografia />
 			<VideografiaMain />
-			<VerMasButton />
-			<Line />
 			<div class="flex justify-center mx-5 mt-40 mb-10">
 				<h1
 					id="cv"
@@ -45,7 +49,6 @@ import Line from "../components/buttons/Line.astro";
 					CURRICULIM VITAE
 				</h1>
 			</div>
-
 			<Cv />
 		</div>
 	</main>

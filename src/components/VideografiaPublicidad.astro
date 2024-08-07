@@ -1,34 +1,121 @@
 ---
 const VIDEOS = [
-  {
-    title: "Serenata #2 MOGUE en Agronomía - Prod. RANCHEAR",
-    link: "https://www.youtube.com/embed/lACcDpygWdA",
-    description: "Esta vez nos fuimos a recorrer Agronomía bien temprano con un café en la mano ☕️ Hasta encontar un espacio perfecto para que el artista grabe sus caniones.",
+{
+    src: '/videos/BA TAXI.mp4',
+    thumbnail: '/thumbnails/bataxi.png',
+    title: 'BRAHMA CARNAVAL',
   },
   {
-    title: "Franco Murua - Niebla Purpura (Video Oficial)",
-    link: "https://www.youtube.com/embed/tbSevR0Dil0",
-    description: "Video Oficial de Franco Murua de la canción Niebla Purpura, versión en español del tema Purple Haze de Jimi Hendrix.",
+    src: '/videos/MovistarPlay.mp4',
+    thumbnail: '/thumbnails/movistarplay.png',
+    title: 'MOVISTAR PLAY',
   },
-];
+  {
+    src: '/videos/Ypf_100anos.mp4',
+    thumbnail: '/thumbnails/ypf_100.png',
+    title: 'YPF 100 AÑOS',
+  },
+  {
+    src: '/videos/Puma2021.mp4',
+    thumbnail: '/thumbnails/puma2021.png',
+    title: 'PUMA REBRANDING 2021',
+  },
+
+]
+
+const VIDEOS_SMALL = [
+{
+    src: '/videos/gcba_diadelamadre.mp4',
+    thumbnail: '/thumbnails/gcba_diadelamadre.png',
+    title: 'GCBA - DÍA DE LA MADRE',
+  },
+  {
+    src: '/videos/Ypf_Arenas.mp4',
+    thumbnail: '/thumbnails/ypf_arenas.png',
+    title: 'YPF PROYECTO ARENAS',
+  },
+  {
+    src: '/videos/BA TAXI.mp4',
+    thumbnail: '/thumbnails/bataxi.png',
+    title: 'BA TAXI',
+  },
+]
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2">
-  {
-    VIDEOS.map(({ title, link, description }) => (
-      <div class="relative p-5">
-        <>
-          <iframe
-            class="w-full h-60 mb-2 rounded-xl"
-            src={link}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          />
-          <h1 class="text font-bold my-2">{title}</h1>
-          <p id="description" class="text-xs text-gray-300">{description}</p>
-        </>
+<div id="video-grid-2" class="grid grid-cols-2 gap-4">
+  {VIDEOS.map((video, index) => (
+    <div class="relative cursor-pointer" data-video-src={video.src}>
+      <img src={video.thumbnail} alt={`Thumbnail of ${video.title}`} class="w-full h-full rounded-lg object-cover" />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-10 text-white text-lg p-2">
+        {video.title}
       </div>
-    ))
-  }
+      <video class="hidden" muted loop playsinline width="100%" height="100%">
+        <source src={video.src} type="video/mp4" />
+        Tu navegador no soporta el elemento video.
+      </video>
+    </div>
+  ))}
 </div>
+
+<div id="video-grid-3" class="grid grid-cols-3 gap-4 mt-4">
+  {VIDEOS_SMALL.map((video, index) => (
+    <div class="relative cursor-pointer" data-video-src={video.src}>
+      <img src={video.thumbnail} alt={`Thumbnail of ${video.title}`} class="w-full h-full rounded-lg object-cover" />
+      <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-lg p-2">
+        {video.title}
+      </div>
+      <video class="hidden" muted loop playsinline width="100%" height="100%">
+        <source src={video.src} type="video/mp4" />
+        Tu navegador no soporta el elemento video.
+      </video>
+    </div>
+  ))}
+</div>
+
+<div id="fullscreen-container" class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-90 z-50">
+  <button id="close-fullscreen" class="absolute top-4 right-4 bg-red-500 text-white p-2 text-lg">X</button>
+  <video id="fullscreen-video" controls autoplay class="w-4/5 h-auto"></video>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const fullscreenContainer = document.getElementById('fullscreen-container');
+    const fullscreenVideo = document.getElementById('fullscreen-video');
+    const closeFullscreenButton = document.getElementById('close-fullscreen');
+
+    if (!fullscreenContainer || !fullscreenVideo || !closeFullscreenButton) {
+      console.error('Uno o más elementos del DOM no se encontraron.');
+      return;
+    }
+
+    function addClickEventListener(videoGridId) {
+      const videoGrid = document.getElementById(videoGridId);
+      if (!videoGrid) {
+        console.error(`No se encontró el elemento con id ${videoGridId}.`);
+        return;
+      }
+
+      videoGrid.addEventListener('click', function(event) {
+        const target = event.target as HTMLElement;
+        const videoDiv = target.closest('div[data-video-src]') as HTMLElement;
+
+        if (videoDiv) {
+          const videoSrc = videoDiv.getAttribute('data-video-src');
+          if (videoSrc) {
+            fullscreenVideo.src = videoSrc;
+            fullscreenContainer.classList.remove('hidden');
+          }
+        }
+      });
+    }
+
+    addClickEventListener('video-grid-2');
+    addClickEventListener('video-grid-3');
+
+    closeFullscreenButton.addEventListener('click', function() {
+      fullscreenContainer.classList.add('hidden');
+      fullscreenVideo.pause();
+      fullscreenVideo.src = '';
+    });
+  });
+</script>
