@@ -42,7 +42,7 @@ const VIDEOS_SMALL = [
 ]
 ---
 
-<div id="video-grid-2" class="grid grid-cols-2 gap-4">
+<div id="video-grid-2" class="grid grid-cols-1 md:grid-cols-2 gap-4 p-3">
   {VIDEOS.map((video, index) => (
     <div class="relative cursor-pointer" data-video-src={video.src}>
       <img src={video.thumbnail} alt={`Thumbnail of ${video.title}`} class="w-full h-full rounded-lg object-cover" />
@@ -57,7 +57,7 @@ const VIDEOS_SMALL = [
   ))}
 </div>
 
-<div id="video-grid-3" class="grid grid-cols-3 gap-4 mt-4">
+<div id="video-grid-3" class="grid grid-cols-1 md:grid-cols-3 gap-4 p-3 mt-4">
   {VIDEOS_SMALL.map((video, index) => (
     <div class="relative cursor-pointer" data-video-src={video.src}>
       <img src={video.thumbnail} alt={`Thumbnail of ${video.title}`} class="w-full h-full rounded-lg object-cover" />
