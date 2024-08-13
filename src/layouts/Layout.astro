@@ -21,6 +21,10 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/ppfavicon.webp" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<!-- youtube Lite -->
+		<script type="module" src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.5.0/lite-youtube.js"></script>
+		<!-- vimeo Lite -->
+		<script type="module" src="https://cdn.jsdelivr.net/npm/lite-vimeo-embed/+esm"></script>
 	</head>
 	<body>
 		<div class="">
@@ -36,7 +40,6 @@ const { title } = Astro.props;
 	}
 
 	html {
-		
 		background: #0F0F0F;
 		scroll-behavior: smooth;
 		color: white;

@@ -8,7 +8,6 @@ import VideografiaMusica from "../components/VideografiaMusica.astro";
 
 import AboutMe from "../components/AboutMe.astro";
 import Cv from "../components/Cv.astro";
-import Line from "../components/buttons/Line.astro";
 import VideografiaPublicidad from "../components/VideografiaPublicidad.astro";
 ---
 
@@ -16,40 +15,47 @@ import VideografiaPublicidad from "../components/VideografiaPublicidad.astro";
 	<main>
 		<Hero />
 		<div class="max-w-screen-xl mx-auto">
-			<div class="border mt-10 md:mt-20 p-3 md:p-8 m-3 md:mb-20">
-				<AboutMe />
+			<div id="aboutme" class="pt-14">
+				<div class="border md:mt-20 p-3 md:p-8 m-3 md:mb-20">
+					<AboutMe />
+				</div>
 			</div>
 			<div class="flex justify-center mx-5 mt-10 md:mt-20 mb-10 md:mb-20">
-				<h1 id="experience" class="text-2xl md:text-3xl font-bold bg-myPink text-white p-2">
-					EXPERIENCIA
-				</h1>
+				<div id="experience" class="pt-10 md:pt-24">
+					<h1 class="text-2xl md:text-3xl font-bold bg-myPink text-white p-2">
+						EXPERIENCIA
+					</h1>
+				</div>
 			</div>
 			<div class="mx-5">
 				<Experience />
 			</div>
 			<div class="flex justify-center mx-5 mt-10 md:mt-20 mb-10 md:mb-20">
-				<h1 id="videograph" class="text-xl md:text-3xl font-bold bg-myPink text-white p-2">
+				<div id="videograph" class="pt-10 md:pt-24">
+				<h1 class="text-xl md:text-3xl font-bold bg-myPink text-white p-2">
 					PUBLICIDAD + EDICIÓN
 				</h1>
 			</div>
-			<VideografiaPublicidad />
-			<div class="flex justify-center items-center mx-5 mt-10 md:mt-20 mb-10 md:mb-20">
-				<h1 id="videograph" class="text-xl md:text-3xl font-bold bg-myPink text-white p-2">
-					CÁMARA + DIRECCIÓN + EDICIÓN
-				</h1>
-			</div>
-			<VideografiaMusica />
-			<Videografia />
-			<VideografiaMain />
-			<div class="flex justify-center mx-5 mt-10 md:mt-20 md:mb-20">
-				<h1
-					id="cv"
-					class="text-2xl md:text-3xl font-bold bg-white text-myPink custom-shadow-cv mb-10 p-2"
-				>
-					CURRICULIM VITAE
-				</h1>
-			</div>
-			<Cv />
 		</div>
+		<VideografiaPublicidad />
+		<div
+			class="flex justify-center items-center mx-5 mt-10 md:mt-20 mb-10 md:mb-20"
+		>
+			<h1 class="text-xl md:text-3xl font-bold bg-myPink text-white p-2">
+				CÁMARA + DIRECCIÓN + EDICIÓN
+			</h1>
+		</div>
+		<VideografiaMusica />
+		<Videografia />
+		<VideografiaMain />
+		<div class="flex justify-center mx-5 mt-10 md:mt-24 md:mb-10">
+			<h1
+				id="cv"
+				class="text-2xl md:text-3xl font-bold bg-white text-myPink custom-shadow-cv mb-10 p-2"
+			>
+				CURRICULIM VITAE
+			</h1>
+		</div>
+		<Cv />
 	</main>
 </Layout>

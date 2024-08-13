@@ -2,36 +2,32 @@
 const VIDEOS = [
   {
     title: "LAS EX - COMBUSTIÓN ESPONTÁNEA",
-    link: "https://www.youtube.com/embed/E7De0KsGEVY",
-    description: "LAS EX grabando su último discazo DEPRECIOSA en ESTUDIO ÁTOMO, bajo la inmejorable tutela de BARBI RECANATI.",
+    link: "E7De0KsGEVY",
+    description:
+      "LAS EX grabando su último discazo DEPRECIOSA en ESTUDIO ÁTOMO, bajo la inmejorable tutela de BARBI RECANATI.",
   },
   {
     title: "Sebastián Peyceré INFLEXIÓN TRÍO  - PAPERS",
-    link: "https://www.youtube.com/embed/qyi5a5A4U5A",
+    link: "qyi5a5A4U5A",
     description: "Sesión en vivo en ESTUDIO TRIADA DE Sirso Iseas.",
   },
   {
     title: "LAS EX - EL ESCRACHE | En vivo en la DILDA feminista",
-    link: "https://www.youtube.com/embed/LZaPoF9Kzss",
+    link: "LZaPoF9Kzss",
     description: "LAS EX - EL ESCRACHE - Autodefensa. 2018.GOZA redords.",
   },
-
 ];
 ---
 
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-6">
+<div class="grid grid-cols-1 md:grid-cols-3 mb-6">
   {
     VIDEOS.map(({ title, link, description }) => (
       <div class="relative p-3">
-        <iframe
-          class="w-full h-60 mb-2 rounded-lg"
-          src={link}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        />
-        <h1 class="text-sm font-bold mb-2">{title}</h1>
-        <p id="description" class="text-xs text-gray-300">{description}</p>
+        <lite-youtube videoid={link}  class="rounded-xl" />
+        <h1 class="text-sm font-bold mb-2 mt-2">{title}</h1>
+        <p id="description" class="text-xs text-gray-300">
+          {description}
+        </p>
       </div>
     ))
   }
