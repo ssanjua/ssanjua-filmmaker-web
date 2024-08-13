@@ -1,46 +1,26 @@
-# 🎬 Audiovisual Portfolio
+# 🎬 Portfolio Audiovisual 👀
 
 ## 🚀 Sobre el proyecto
 
-Este es un proyecto de portfolio audiovisual creado para mostrar una colección de videos que representan mi trabajo como profesional del diseño audiovisual. La plataforma está desarrollada utilizando Astro, lo que proporciona una experiencia web rápida y eficiente.
+Les presento mi página web donde se pueden ver algunos de mis proyectos como Diseñadora de Imagen y Sonido. La web está desarrollada utilizando Astro, lo que proporciona una experiencia web rápida y eficiente.
 
-## 👀 Características
+### 😍 Tecnologías
 
-★ Visualización de Videos: Explora una variedad de videos que muestran mi trabajo en diferentes proyectos y áreas de especialización.
-★ Interfaz Intuitiva: Navega fácilmente a través del portfolio gracias a una interfaz intuitiva y amigable para el usuario.
-★ Responsive: Disfruta del portfolio en cualquier dispositivo, ya sea móvil, tablet o desktop, gracias al diseño responsive.
+![Astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![React](https://img.shields.io/badge/react-%23807ACC.svg?style=for-the-badge&logo=react&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![Lite-Vimeo](https://img.shields.io/badge/Lite-Vimeo-%23007ACC.svg?style=for-the-badge&logo=npm&logoColor=white) ![Lite-YouTube](https://img.shields.io/badge/Lite-YouTube-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)  ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
+ 
 
-
-<p align="center" >
-<a href="https://ppaupallares.vercel.app"><img src="ppaupallares.webp" alt="Atletico Oeste YouTube" width="400"/></a>
-</p>
+![screenshot](public/webpreview.webp)
 
 
 > Work in Progress: Algunas características aún están en desarrollo, incluyendo:
 
-✦ Link a Proyectos de Publicidad: Próximamente podrás acceder a proyectos específicos de publicidad para ver más ejemplos de mi trabajo.
 ✦ Traducción a Inglés: Se está trabajando en la traducción del contenido del portfolio al inglés para una audiencia más amplia.
 ✦ Color Switch: Próximamente podrás cambiar entre modo oscuro y modo claro.
 
 
-### Uso
-Clona este repositorio en tu máquina local.
+### 👀 Quieres saber más?
 
-```sh
-  git clone https://github.com/ssanjua/ssanjua-filmmaker-web.git
-```
-
-Instala las dependencias del proyecto utilizando npm o yarn.
-
-```sh
-  npm install
-```
-
-Ejecuta el proyecto localmente utilizando npm start o yarn start.
-
-```sh
-  npm run dev
-```
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/paupallares/) [![X](https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white)](https://twitter.com/pupipallares) [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](ppaupallares@gmail.com) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](www.instagram.com/ppupipallares) 
 
 ***Contribución***
 
